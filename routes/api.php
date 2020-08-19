@@ -18,6 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', function(){
+Route::get('/test', function(Request $request){
     //return ['msg' => 'Minha primeira api'];
+    dd($request->headers->all());
+    $response = new \Illuminate\Http\Response(json_encode(['mgs' => 'Minha primeira resposta de API']));
+    $response->header('Content-Type', 'application/json');
+
+    return $response;
 });
