@@ -26,3 +26,16 @@ Route::get('/test', function(Request $request){
 
     return $response;
 });
+
+//Products Route
+
+Route::get('/products',function(){
+    $result = App\Product::all();
+    if(!count($result)){
+        $response = new \Illuminate\Http\Response(json_encode(['result' => 'null']));
+        $response->header('Content-Type', 'application/json');
+    }else{
+        $response = $result;
+    }
+    return $response;
+});
