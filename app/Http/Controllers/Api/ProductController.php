@@ -37,4 +37,10 @@ class ProductController extends ApiController
 
         return $this->sendResponse($product,"Retorno com sucesso");
     }
+
+    public function delete($id){
+        $product = Product::find($id);
+        $product->delete();
+        return $this->sendResponse($product,"Product removed");
+    }
 }

@@ -33,4 +33,5 @@ Route::prefix('products')->group(function () {
     Route::get('/{id}', 'Api\ProductController@show');
     Route::post('/', 'Api\ProductController@save');
     Route::put('/', 'Api\ProductController@update');
+    Route::delete('/{id}', 'Api\ProductController@delete');
 });
