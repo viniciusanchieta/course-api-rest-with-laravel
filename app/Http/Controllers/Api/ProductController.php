@@ -16,6 +16,16 @@ class ProductController extends ApiController
     public function index(){
         $products = $this->product->all();
         return $this->sendResponse($products,"Retorno com sucesso");
-        return response()->json($products);
+    }
+
+    public function show($id){
+        $products = Product::find($id);
+        return $this->sendResponse($products,"Retorno com sucesso");
+    }
+
+    public function save(Request $request){
+        $data = $request->all();
+        $product = Product::create($data);
+        return $this->sendResponse($product,"Retorno com sucesso");
     }
 }
