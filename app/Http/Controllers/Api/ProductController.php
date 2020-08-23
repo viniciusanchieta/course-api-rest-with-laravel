@@ -28,4 +28,13 @@ class ProductController extends ApiController
         $product = Product::create($data);
         return $this->sendResponse($product,"Retorno com sucesso");
     }
+
+    public function update(Request $request){
+        $data = $request->all();
+
+        $product = Product::find($data['id']);
+        $product->update($data);
+
+        return $this->sendResponse($product,"Retorno com sucesso");
+    }
 }
