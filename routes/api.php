@@ -23,7 +23,6 @@ Route::get('/test', function(Request $request){
 
     $response = new \Illuminate\Http\Response(json_encode(['mgs' => 'Minha primeira resposta de API']));
     $response->header('Content-Type', 'application/json');
-
     return $response;
 });
 
@@ -35,3 +34,5 @@ Route::prefix('products')->group(function () {
     Route::put('/', 'Api\ProductController@update');
     Route::delete('/{id}', 'Api\ProductController@delete');
 });
+
+Route::resource('/users', 'Api\UserController');
