@@ -10,6 +10,9 @@
 - v2.4 - Create route for update product
 - v2.5 - Create route for delete product
 
-## v3.0 - Create the resource
+#### v3.0 - Create the resource
 - 3.1 - Create the resource of product
 - 3.2 - Create the colletion of product
+
+#### v4.0 - Alter Readme
+- 4.1 - Alter paragraph of version 3.0 
