@@ -10,3 +10,5 @@
 - v2.4 - Create route for update product
 - v2.5 - Create route for delete product
 
+## v3.0 - Create the resource
+- 3.1 - Create the resource of product

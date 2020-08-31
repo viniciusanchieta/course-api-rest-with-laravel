@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return $this->sendResponse(__METHOD__,"true");
     }
 
     /**
@@ -25,7 +24,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->sendResponse(__METHOD__,"true");
     }
 
     /**
@@ -36,7 +35,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return $this->sendResponse(__METHOD__,"true");
     }
 
     /**
@@ -48,7 +47,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->sendResponse(__METHOD__,"true");
     }
 
     /**
@@ -59,6 +58,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $this->sendResponse(__METHOD__,"true");
     }
 }

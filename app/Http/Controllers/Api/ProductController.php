@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\ProductResource;
 use App\Product;
 
 use Illuminate\Http\Request;
@@ -19,8 +20,10 @@ class ProductController extends ApiController
     }
 
     public function show($id){
-        $products = Product::find($id);
-        return $this->sendResponse($products,"Retorno com sucesso");
+        $product = Product::find($id);
+        // return $this->sendResponse($products,"Retorno com sucesso");
+
+        return new ProductResource($product);
     }
 
     public function save(Request $request){
