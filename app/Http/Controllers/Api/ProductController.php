@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\ProductCollection;
 use App\Http\Resources\ProductResource;
 use App\Product;
 
@@ -15,8 +16,8 @@ class ProductController extends ApiController
     }
 
     public function index(){
-        $products = $this->product->all();
-        return $this->sendResponse($products,"Retorno com sucesso");
+        $products = $this->product->paginate(1);
+        return new ProductCollection($products);
     }
 
     public function show($id){

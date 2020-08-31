@@ -12,3 +12,4 @@
 
 ## v3.0 - Create the resource
 - 3.1 - Create the resource of product
+- 3.2 - Create the colletion of product
