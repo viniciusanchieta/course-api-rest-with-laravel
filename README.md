@@ -20,3 +20,5 @@
 #### v5.0 - Authentication
 - 5.1 - Create authentication basic and seeder for register the data fake
 
+#### v6.0 - Create Seeder
+- 6.1 - Create seeder for register products
