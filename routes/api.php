@@ -30,7 +30,7 @@ Route::get('/test', function(Request $request){
 Route::prefix('products')->group(function () {
     Route::get('/', 'Api\ProductController@index');
     Route::get('/{id}', 'Api\ProductController@show');
-    Route::post('/', 'Api\ProductController@save');
+    Route::post('/', 'Api\ProductController@save')->middleware('auth.basic');
     Route::put('/', 'Api\ProductController@update');
     Route::delete('/{id}', 'Api\ProductController@delete');
 });

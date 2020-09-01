@@ -15,4 +15,8 @@
 - 3.2 - Create the colletion of product
 
 #### v4.0 - Alter Readme
-- 4.1 - Alter paragraph of version 3.0 
+- 4.1 - Alter paragraph of version 3.0
+
+#### v5.0 - Authentication
+- 5.1 - Create authentication basic and seeder for register the data fake
+
