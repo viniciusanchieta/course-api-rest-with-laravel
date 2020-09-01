@@ -22,3 +22,6 @@
 
 #### v6.0 - Create Seeder
 - 6.1 - Create seeder for register products
+
+#### v7.0 - Create Filters
+- 7.1 - Start product filter
