@@ -25,3 +25,4 @@
 
 #### v7.0 - Create Filters
 - 7.1 - Start product filter
+- 7.2 - Add condition for filter product
