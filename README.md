@@ -28,3 +28,4 @@
 - 7.2 - Add condition for filter product
     - 7.2.1 - Improvement in condition of filter (get operator)
     - 7.2.2 - Create repository
+- 7.3 - Create repository abstract
