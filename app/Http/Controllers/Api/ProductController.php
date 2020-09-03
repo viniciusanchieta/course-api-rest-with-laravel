@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Resources\ProductCollection;
 use App\Http\Resources\ProductResource;
 use App\Product;
-
+use App\Repository\ProductRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends ApiController
@@ -19,23 +19,16 @@ class ProductController extends ApiController
     public function index(Request $request)
     {
         $products = $this->product;
-
+        $productRepository = new ProductRepository($products);
         if($request->has('conditions')){
-            $expressions = explode(';',$request->get('conditions'));
-
-            foreach ($expressions as $e) {
-                $exp = explode(':', $e);
-                // If exist two parameters operator is '=' if exist three, second is the operator
-                $products = $products->where($exp[0],$exp[1],$exp[2]);
-            }
+            $productRepository->SelectConditions($request->get('conditions'));
         }
 
-        if($request->has('fields')){
-            $fields = $request->get('fields');
-            $products = $products->selectRaw($fields);
+        if ($request->has('fields')) {
+            $productRepository->selectFilter($request->get('fields'));
         }
 
-        return new ProductCollection($products->paginate(10));
+        return new ProductCollection($productRepository->getResult()->paginate(10));
     }
 
     public function show($id)
