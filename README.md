@@ -32,3 +32,4 @@
 
 #### 8.0 - Create Validation
 - 8.1 - Start product registration validation
+- 8.2 - Set validation return in json
