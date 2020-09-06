@@ -47,7 +47,7 @@ class ProductController extends ApiController
         return $this->sendResponse($product, "Retorno com sucesso");
     }
 
-    public function update(Request $request)
+    public function update(ProductRequest $request)
     {
         $data = $request->all();
 

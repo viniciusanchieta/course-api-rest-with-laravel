@@ -33,3 +33,5 @@
 #### 8.0 - Create Validation
 - 8.1 - Start product registration validation
 - 8.2 - Set validation return in json
+- 8.3 - Explore the http status code
+    - Doc: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
