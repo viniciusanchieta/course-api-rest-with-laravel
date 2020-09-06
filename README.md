@@ -35,3 +35,6 @@
 - 8.2 - Set validation return in json
 - 8.3 - Explore the http status code
     - Doc: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+#### 9.0 - Create Project of course
+- https://github.com/viniciusanchieta/property-catalog
